@@ -5,37 +5,27 @@ fun main() {
         val list1 = mutableListOf<Int>()
         val list2 = mutableListOf<Int>()
         for(line in input) {
-            val split = line.split("   ")
-            list1.add(split[0].toInt())
-            list2.add(split[1].toInt())
+            val split = line.split("   ").map { it.toInt() }
+            list1.add(split[0])
+            list2.add(split[1])
         }
 
         list1.sort()
         list2.sort()
 
-        var sum = 0
-        for (i in list1.indices) {
-            sum += abs(list1[i] - list2[i])
-        }
-        return sum
-
+        return list1.zip(list2).sumOf { abs(it.first - it.second) }
     }
 
     fun part2(input: List<String>): Int {
         val list1 = mutableListOf<Int>()
         val list2 = mutableListOf<Int>()
         for(line in input) {
-            val split = line.split("   ")
-            list1.add(split[0].toInt())
-            list2.add(split[1].toInt())
+            val split = line.split("   ").map { it.toInt() }
+            list1.add(split[0])
+            list2.add(split[1])
         }
 
-        var sum = 0
-        for (num in list1) {
-            sum += num * list2.count { it == num }
-        }
-
-        return sum
+        return list1.sumOf { it * list2.count { i -> i == it } }
     }
 
     // Test if implementation meets criteria from the description, like:
