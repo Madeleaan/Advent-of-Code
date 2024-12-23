@@ -30,12 +30,11 @@ fun main() {
 
         fun search(node: String, rest: List<String>) {
             val key = rest.sorted()
-            if (key in groups) return
-            groups.add(key)
+            if (!groups.add(key)) return
             for (n in cons[node]!!) {
                 if (n in rest) continue
                 if (!cons[n]!!.containsAll(rest)) continue
-                search(n, listOf(*rest.toTypedArray(), n))
+                search(n, rest + n)
             }
         }
 
