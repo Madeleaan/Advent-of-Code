@@ -1,3 +1,8 @@
+package `2024`
+
+import println
+import readInput
+
 fun main() {
     fun solve(input: String, blinks: Int): Long {
         var dict = input.split(" ").groupingBy { it }.eachCount().mapValues { it.value.toLong() }

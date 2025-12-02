@@ -1,3 +1,8 @@
+package `2024`
+
+import println
+import readInput
+
 fun main() {
     fun isValidList(nums: List<Int>): Boolean {
         return (nums == nums.sorted() || nums == nums.sortedDescending())

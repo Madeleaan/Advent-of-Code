@@ -1,3 +1,7 @@
+package `2024`
+
+import println
+import readInput
 import java.util.*
 import kotlin.collections.ArrayDeque
 

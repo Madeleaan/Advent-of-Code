@@ -1,3 +1,8 @@
+package `2024`
+
+import println
+import readInput
+
 fun main() {
     fun findPath(walls: List<Coords>, height: Int, width: Int): Int? {
         val directions = listOf(Coords(0, -1), Coords(1, 0), Coords(0, 1), Coords(-1, 0))

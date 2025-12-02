@@ -1,3 +1,8 @@
+package `2024`
+
+import println
+import readInput
+
 fun main() {
     fun invalidNums(line: List<Int>, instructions: List<String>): List<Pair<Int, Int>> {
         val out = mutableListOf<Pair<Int, Int>>()

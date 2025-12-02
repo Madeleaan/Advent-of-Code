@@ -1,3 +1,8 @@
+package `2024`
+
+import println
+import readInput
+
 fun main() {
     fun part1(input: List<String>): String {
         val regs = mutableListOf(input[0].split(": ").last().toLong(), 0, 0)
